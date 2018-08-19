@@ -11,3 +11,5 @@ db.sqlite3
 /.vscode
 /media
 /static
+/static_cdn
+static_my_proj/
