@@ -1,7 +1,10 @@
-{% url 'home' as home_url %} {% url 'contact' as contact_url %} {% url 'products:list' as product_list_url %} {% url 'login'
-as login_url %} {% url 'register' as register_url %}
+{% url 'home' as home_url %} 
+{% url 'contact' as contact_url %} 
+{% url 'products:list' as product_list_url %} 
+{% url 'login' as login_url %} 
+{% url 'register' as register_url %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}"><img src="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg"
         width="30" height="30" alt="">{% if brand_name %} {{ brand_name }} {% else %} CFE eCommerce {% endif %}</a>
