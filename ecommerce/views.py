@@ -6,6 +6,8 @@ from .forms import ContactForm, LoginForm, RegisterForm
 
 
 def home_page(request):
+    # print(request.session.get("first_name", "Unknown"))
+    #request.session['first_name'] - will get an error if doesn't exist
     context = {
         "title": "Hello World!",
         "content": "welcome to the homepage!"
@@ -48,7 +50,7 @@ def login_page(request):
         "form": form
     }
     # print("User logged in")
-    print(request.user.is_authenticated())
+    # print(request.user.is_authenticated())
     if form.is_valid():
         # print(form.cleaned_data)
         username = form.cleaned_data.get("username")
@@ -79,7 +81,7 @@ def register_page(request):
         email = form.cleaned_data.get("email")
         password = form.cleaned_data.get("password")
         new_user = User.objects.create_user(username, email, password)
-        print(new_user)
+        # print(new_user)
         
     return render(request, "auth/register.html", context)
 
