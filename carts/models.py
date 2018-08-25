@@ -11,7 +11,7 @@ class CartManager(models.Manager):
 
     def new_or_get(self, request):
         cart_id = request.session.get("cart_id", None)
-        print(cart_id)
+        # print(cart_id)
         # if cart_id is None:
         #     cart_obj = cart_create()
         #     request.session['cart_id'] = cart_obj.id
